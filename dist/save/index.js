@@ -44921,8 +44921,9 @@ function run() {
                 return;
             }
             if (utils.isExactKeyMatch(primaryKey, state)) {
-                core.info(`Cache hit occurred on the primary key ${primaryKey}, not saving cache.`);
-                return;
+                core.info(
+                    `Cache hit occurred on the primary key ${primaryKey}, updating cache.`
+                );
             }
             const cachePaths = utils.getInputAsArray(constants_1.Inputs.Path, {
                 required: true
